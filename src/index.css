@@ -1,0 +1,72 @@
+@import './assets/theme/fonts.scss';
+/* body{
+  background-color: #d9d9d9;
+} */
+label{
+  font-family: 'Lexend Peta', sans-serif;
+  font-size: small;
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  background-color: white;
+  margin-left: 5px;
+}
+.form-control{
+  font-family: 'Lexend Peta', sans-serif;
+  font-size: small;
+}
+.form-control:focus {
+  border-color: black;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+label::first-letter{
+  color: #d81d19;
+}
+.flex-column{
+  display: flex;
+}
+
+.flex-row-center{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: row;
+}
+.flex-column-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+.form-control{
+  height: 70px;
+  padding: 20px;
+  margin-top: 10px;
+}
+.border{
+  border: 1px solid black;
+}
+.gap20{
+  gap: 20px;
+}
+.registration-btn{
+  border-radius: 100px;
+  border: none;
+  height: 70px;
+  width: 100%;
+  font-family: 'Lexend Peta', sans-serif;
+  background-color:#11c5f5;
+  font-size:14px;
+  color: white;
+}
+.registration-btn:hover{
+  background-color: #0172c2;
+}
+.padding20{
+  padding: 20px;
+}
+.full{
+  height: 100vh;
+
+}

@@ -1,0 +1,12 @@
+// B&W
+$ShadowS: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 8px rgba(0, 0, 0, 0.08);
+$ShadowM: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 12px rgba(0, 0, 0, 0.12);
+$ShadowL: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.16);
+$ShadowDropDown: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 8px rgba(0, 0, 0, 0.08), 0px 0px 8px rgba(0, 0, 0, 0.08);
+
+:export {
+    S: $ShadowS;
+    M: $ShadowM;
+    L: $ShadowL;
+    ShadowDropDown: $ShadowDropDown;
+}
