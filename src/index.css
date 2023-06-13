@@ -1,8 +1,14 @@
-@import './assets/theme/fonts.scss';
-/* body{
-  background-color: #d9d9d9;
-} */
-label{
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 600;
+  src: url('assets/fonts/Gilroy-Bold.woff2');
+}
+@font-face {
+    font-family: 'GilroyReg';
+    font-weight: 800;
+    src: url('assets/fonts/Gilroy-Regular.woff2');
+}
+.commonlabel{
   font-family: 'Lexend Peta', sans-serif;
   font-size: small;
   position: absolute;
@@ -20,7 +26,7 @@ label{
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-label::first-letter{
+.commonlabel::first-letter{
   color: #d81d19;
 }
 .flex-column{
@@ -33,10 +39,22 @@ label::first-letter{
  justify-content: center;
  flex-direction: row;
 }
+.flex-row-space{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
 .flex-column-center{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+ }
+ .flex-column-space{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
   flex-direction: column;
  }
 .form-control{
@@ -56,7 +74,7 @@ label::first-letter{
   height: 70px;
   width: 100%;
   font-family: 'Lexend Peta', sans-serif;
-  background-color:#11c5f5;
+  background-color:#4fbce5;
   font-size:14px;
   color: white;
 }
@@ -68,5 +86,110 @@ label::first-letter{
 }
 .full{
   height: 100vh;
+}
+.flex-row-space{
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+a{
+  color:#4fbce5;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 300;
+  font-size: smaller;
+ cursor: pointer;
+ text-decoration: none;
+}
 
+h1{
+font-family: 'Gilroy', sans-serif;
+font-weight: 500;
+font-size: 2.5rem;
+line-height: 48px;
+-webkit-font-smoothing: antialiased;
+color: black;
+}
+#forgotemail{
+  font-family: 'Gilroy', sans-serif;
+font-weight: 500;
+}
+#verificationemail{
+  font-family: 'Gilroy', sans-serif;
+font-weight: 200;
+font-size: 15px;
+line-height: 48px;
+-webkit-font-smoothing: antialiased;
+color: #1a8310;
+}
+#otpclock{
+  font-family: 'Gilroy', sans-serif;
+font-weight: 200;
+font-size: 15px;
+line-height: 45px;
+-webkit-font-smoothing: antialiased;
+}
+.submit{
+  border-radius: 100px;
+  border: none;
+  height: 53px;
+  width: 40%;
+  font-family: 'Gilroy', sans-serif;
+  background-color:#4fbce5;
+  font-size:14px;
+  color: black;
+}
+#resetEmail{
+  font-family: 'Gilroy', sans-serif;
+  font-size: small;
+  width: 100%;
+  height: 70%;
+}
+#resetEmail:focus{
+  border-color: azure;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.closemark{
+  position: absolute;
+  margin-left: 85%;
+  top:0;
+  margin-top: 20px;
+}
+.verify{
+  border-radius: 100px;
+  border: none;
+  height: 50px;
+  width: 40%;
+  font-family: 'Gilroy', sans-serif;
+  background-color:#d1b4f0;
+  font-size:14px;
+  color: black;
+}
+.verify:hover{
+  background-color: #481083;
+  color: white;
+}
+#otp{
+  font-family: 'Gilroy', sans-serif;
+  font-size: small;
+  width: 100%;
+  height: 70%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+#resendcode{
+  color:#4fbce5;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 300;
+  font-size: smaller;
+ cursor: pointer;
+ text-decoration:underline;
+}
+.full-width{
+  width: 100%;
+}
+#newpassword,#retypenewpassword{
+  height: 20%;
 }

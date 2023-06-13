@@ -5,7 +5,18 @@
    Mobile="*Mobile Number",
    Password="*Password",
    ConfirmPassword="*Confirm Password",
-   CreateAnAccount="Create an Account"
+   CreateAnAccount="Create an Account",
+   Login="Login",
+   WelcomeBack="Welcome back",
+   CreateNewAccount="Create new Account?",
+   ForgetPassword="Forgot Password",
+   Submit="Submit",
+   Forgotcheck="Please find your verification code in your inbox",
+   Verify="Verify",
+   verficationEmail="Verification Email sent successfully",
+   ResendCode="Resend Code",
+   SavePassword="Save Password"
+
 }
 enum FormPlaceholders{
    Email="Enter your Email",
@@ -14,6 +25,9 @@ enum FormPlaceholders{
    Mobile="Enter your Mobile Number",
    Password="Enter your Password",
    ConfirmPassword="Confirm your Password",
+   EnterOTP="Enter OTP",
+   EnternewPassword="Enter New Password",
+   RetypeNewPassword="Retype New Password",
 }
 enum FormErrors{
   EmailError="Please Enter a valid Email address",

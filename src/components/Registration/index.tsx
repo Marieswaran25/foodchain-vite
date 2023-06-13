@@ -11,27 +11,27 @@ const SignupForm = () => {
       <div className="col-md-4 col-12">
       <Form className="flex-column gap20">
         <Form.Group >
-          <Form.Label>{FormCredentials.Email}</Form.Label>
+          <Form.Label className="commonlabel">{FormCredentials.Email}</Form.Label>
           <Form.Control type="Email"  onChange={e=>handleInput(e)} />
         </Form.Group>
         <Form.Group className="gap20" >
-          <Form.Label>{FormCredentials.Firstname}</Form.Label>
+          <Form.Label className="commonlabel">{FormCredentials.Firstname}</Form.Label>
           <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>{FormCredentials.Lastname}</Form.Label>
+          <Form.Label className="commonlabel">{FormCredentials.Lastname}</Form.Label>
           <Form.Control type="text"  />
         </Form.Group>
         <Form.Group>
-          <Form.Label>{FormCredentials.Mobile}</Form.Label>
+          <Form.Label className="commonlabel">{FormCredentials.Mobile}</Form.Label>
           <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>{FormCredentials.Password}</Form.Label>
+          <Form.Label className="commonlabel">{FormCredentials.Password}</Form.Label>
           <Form.Control type="text" />
         </Form.Group>
         <Form.Group>
-          <Form.Label>{FormCredentials.ConfirmPassword}</Form.Label>
+          <Form.Label className="commonlabel">{FormCredentials.ConfirmPassword}</Form.Label>
           <Form.Control type="text"  />
         </Form.Group>
         <Button className="registration-btn"type="submit">{FormCredentials.CreateAnAccount}</Button>
