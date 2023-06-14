@@ -15,7 +15,8 @@
    Verify="Verify",
    verficationEmail="Verification Email sent successfully",
    ResendCode="Resend Code",
-   SavePassword="Save Password"
+   SavePassword="Save Password",
+   Alreadyhaveanaccount="Already have an account?"
 
 }
 enum FormPlaceholders{

@@ -193,3 +193,14 @@ line-height: 45px;
 #newpassword,#retypenewpassword{
   height: 20%;
 }
+small{
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 300;
+}
+a:hover{
+  color: #0172c2;
+
+}
+.card{
+  border: none;
+}
