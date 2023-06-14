@@ -46,6 +46,8 @@ const LoginForm = (): JSX.Element => {
   const [btn, disablebtn] = React.useState(false);
   const [password, setpassword] = React.useState({
     Password: "Password",
+    retypenewpassword:"Password",
+    newpassword:"Password"
   });
   const [expiremsg, setexpiremgs] = React.useState("");
 
@@ -84,7 +86,7 @@ const LoginForm = (): JSX.Element => {
     enternewPassword: () => {
       return (
         <Card
-          style={{ backgroundColor: "white", height: "100%", padding: "30px" }}
+          style={{ backgroundColor: "white", height: "100%", padding: "50px" }}
         >
           <FontAwesomeIcon
             icon={faCircleXmark}
@@ -98,9 +100,10 @@ const LoginForm = (): JSX.Element => {
             onSubmit={handlesumbitnewpasword(props.savePassword)}
           >
             <Form.Group className="full-width">
-              <Form.Control
+             <div className="flex-row-center">
+             <Form.Control
                 as={"input"}
-                type="password"
+                type={password.newpassword}
                 style={{ backgroundColor: colors.B2 }}
                 id="newpassword"
                 onChange={(e) =>
@@ -108,14 +111,23 @@ const LoginForm = (): JSX.Element => {
                 }
                 placeholder={FormPlaceholders.EnternewPassword}
               />
+                 <FontAwesomeIcon
+                    icon={password.newpassword === "Password" ? faEyeSlash : faEye}
+                    className="text-dark"
+                    id="newpassword"
+                    style={{ marginLeft: "-30px", cursor: "pointer" }}
+                    onClick={(e) => PasswordtoText(e)}
+                  ></FontAwesomeIcon>
+             </div>
               <Form.Text className="text-danger">
                 {newpassworderrors.Password?.message}
               </Form.Text>
             </Form.Group>
             <Form.Group className="full-width">
-              <Form.Control
+             <div className="flex-row-center">
+             <Form.Control
                 as={"input"}
-                type="password"
+                type={password.retypenewpassword}
                 style={{ backgroundColor: colors.B2 }}
                 id="retypenewpassword"
                 onChange={(e) =>
@@ -123,6 +135,14 @@ const LoginForm = (): JSX.Element => {
                 }
                 placeholder={FormPlaceholders.RetypeNewPassword}
               />
+                <FontAwesomeIcon
+                    icon={password.retypenewpassword === "Password" ? faEyeSlash : faEye}
+                    className="text-dark"
+                    id="retypenewpassword"
+                    style={{ marginLeft: "-30px", cursor: "pointer" }}
+                    onClick={(e) => PasswordtoText(e)}
+                  ></FontAwesomeIcon>
+             </div>
               <Form.Text className="text-danger">
                 {newpassworderrors.ConfirmPassword?.message}
               </Form.Text>
@@ -289,6 +309,16 @@ const LoginForm = (): JSX.Element => {
       password.Password === "Password"
         ? setpassword({ ...password, Password: "text" })
         : setpassword({ ...password, Password: "Password" });
+    }
+    if(e.currentTarget.id==='retypenewpassword'){
+      password.retypenewpassword==="Password"
+      ? setpassword({ ...password, retypenewpassword: "text" })
+      : setpassword({ ...password, retypenewpassword: "Password" });
+    }
+    if(e.currentTarget.id==='newpassword'){
+      password.newpassword==="Password"
+      ? setpassword({ ...password, newpassword: "text" })
+      : setpassword({ ...password, newpassword: "Password" });
     }
   }
 

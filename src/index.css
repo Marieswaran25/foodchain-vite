@@ -151,9 +151,9 @@ line-height: 45px;
 }
 .closemark{
   position: absolute;
-  margin-left: 85%;
+  margin-left: 80%;
   top:0;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 .verify{
   border-radius: 100px;
@@ -190,9 +190,9 @@ line-height: 45px;
 .full-width{
   width: 100%;
 }
-#newpassword,#retypenewpassword{
+/* #newpassword,#retypenewpassword{
   height: 20%;
-}
+} */
 small{
   font-family: 'Gilroy', sans-serif;
   font-weight: 300;
