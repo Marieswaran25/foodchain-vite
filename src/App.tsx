@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import SignupForm from './components/Registration'
 import {BrowserRouter,Route,Routes}from 'react-router-dom'
 import LoginForm from './components/Login'
+import LandingPage from './components/LandingPage'
 function App() {
 
   return (
@@ -12,6 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<SignupForm />}></Route>
       <Route path="/login" element={<LoginForm />}></Route>
+      <Route path='/order' element={<LandingPage />}></Route>
     </Routes>
   </BrowserRouter>
   )

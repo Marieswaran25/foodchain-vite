@@ -57,6 +57,12 @@
   justify-content: space-between;
   flex-direction: column;
  }
+ .flex-column-end{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
+ }
 .form-control{
   height: 70px;
   padding: 20px;
@@ -83,6 +89,9 @@
 }
 .padding20{
   padding: 20px;
+}
+.padding10{
+  padding: 10px;
 }
 .full{
   height: 100vh;
@@ -203,4 +212,71 @@ a:hover{
 }
 .card{
   border: none;
+}
+.logo{
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  border:1px solid #ffcfcd;
+  font-family: 'Gilroy', sans-serif;
+  font-size: larger;
+
+}
+.cart{
+  width:20px;
+  height: 20px;
+}
+.gap10{
+  gap:10px
+}
+.flex-row-space2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.cart:hover{
+  color: #00315e;
+}
+p{
+  font-family: 'Gilroy', sans-serif;
+
+}
+.border-bottom{
+  border-bottom: 1px solid black;
+}
+.charcard>p:hover{
+  background-color: #76838f;
+}
+.charcard{
+    height: 100%;
+    width: 98%;
+    margin: 0 auto; /* So as to center the box */
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+#main-content{
+  margin-top: 12%;
+}
+.gilroy{
+  font-family: 'Gilroy', sans-serif;
+}
+#content-tittle{
+  font-size: 100px;
+  line-height: 100px;
+}
+@media only screen and (max-width: 768px) {
+  #content-tittle{
+    font-size: 70px;
+    line-height: 90px;
+  }
+}
+.hotelimg{
+  height:70px;
+  width:70px;
+}
+.gap3{
+  gap:3px
 }

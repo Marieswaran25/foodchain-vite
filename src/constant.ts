@@ -38,4 +38,16 @@ enum FormErrors{
   PasswordError="Password contains Eight Characters",
   ConfirmpasswordError="Password doesn't match",
 }
-export {FormCredentials,FormErrors,FormPlaceholders}
+enum UserDetails{
+  Myorders="My Orders",
+  MyAccount="My Account",
+  MyCart="My Cart",
+  Signout="Sign Out"
+}
+enum LandingPageInfo{
+  whereyourfood="Where are you taking your"
+}
+enum HotelCard{
+  visitMyHote="Visit My Hotel"
+}
+export {FormCredentials,FormErrors,FormPlaceholders,UserDetails,LandingPageInfo,HotelCard}
