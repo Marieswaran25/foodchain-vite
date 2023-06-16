@@ -4,12 +4,14 @@ import Navheader from "../Navbar"
 import { Container } from "react-bootstrap"
 import colors from '../../assets/theme/colors.module.scss'
 import HotelCard from "../Hotelcards"
+import { getAllhotels } from "../../Integrations/Hotels"
 
 
 
 function LandingPage() {
   const [Timemode,setTimemode]=React.useState('');
   const gettime=new Date().getHours();
+  console.log(getAllhotels())
   React.useEffect(()=>{
     if(gettime>=0&&gettime<=10){
       setTimemode('Breakfast ?')
