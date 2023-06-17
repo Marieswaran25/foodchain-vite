@@ -280,3 +280,18 @@ p{
 .gap3{
   gap:3px
 }
+.gap30{
+  gap:30px
+}
+#Vegeterian{
+  border:2px solid #5ab94b;
+  padding: 2px;
+}
+#Non-Vegeterian{
+  border:2px solid #d81d19;
+  padding: 2px;
+
+}
+#takedine:hover{
+background-color: #00315e;
+}

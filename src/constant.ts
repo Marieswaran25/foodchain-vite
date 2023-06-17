@@ -42,10 +42,13 @@ enum UserDetails{
   Myorders="My Orders",
   MyAccount="My Account",
   MyCart="My Cart",
+  Myfavourites="My favourites",
   Signout="Sign Out"
+
 }
 enum LandingPageInfo{
-  whereyourfood="Where are you taking your"
+  whereyourfood="Where are you taking your",
+  VisitHotel="Take Your Dine"
 }
 enum HotelCard{
   visitMyHote="Visit My Hotel"

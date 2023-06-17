@@ -1,4 +1,4 @@
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Container, Card } from "react-bootstrap";
 import logo from "../../assets/images/Logo.jpg";
@@ -15,7 +15,8 @@ function Navheader() {
         <Card id="charcard">
           <Card.Body className="flex-column">
 <div className="padding20 charcard" style={{backgroundColor:colors.B1}}>
-<Card.Text className=" padding10 border-bottom">{UserDetails.MyAccount}</Card.Text>
+            <Card.Text className=" padding10 border-bottom">{UserDetails.MyAccount}</Card.Text>
+            <Card.Text  className=" padding10 border-bottom" >{UserDetails.Myfavourites}</Card.Text>
             <Card.Text  className=" padding10 border-bottom" >{UserDetails.Myorders}</Card.Text>
             <Card.Text className=" padding10 border-bottom">{UserDetails.MyCart}</Card.Text>
             <Card.Link className="padding10" href="/login">{UserDetails.Signout}</Card.Link>
@@ -26,7 +27,8 @@ function Navheader() {
     },
   };
   return (
-<Container>
+    // onMouseLeave={e=>{e.preventDefault();showopencard(false)}}
+<Container >
 <div className="">
 <Navbar collapseOnSelect expand="lg" bg="transparent" variant="">
       <Container className="">
@@ -35,13 +37,20 @@ function Navheader() {
             <img src={logo} alt="Logo" className="logo" />
             <h4 className="text-dark">Food Chain</h4>
           </Navbar.Brand>
-          <div className="flex-row-center gap20">
+          <div className="flex-row-center gap30">
+          <h2 className="text-center">
+              <FontAwesomeIcon
+                icon={faHeart}
+                className="justify-content-end cart text-danger"
+              ></FontAwesomeIcon>
+            </h2>
             <h2 className="text-center">
               <FontAwesomeIcon
                 icon={faCartShopping}
                 className="justify-content-end cart"
               ></FontAwesomeIcon>
             </h2>
+         
             <User onclick={() => !opencard? showopencard(true):showopencard(false)} />
           </div>
         </div>
