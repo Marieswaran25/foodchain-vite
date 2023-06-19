@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faCircle, faLocationDot, faPhone, faUtensils } from '@fortawesome/free-solid-svg-icons';
 import colors from "../../assets/theme/colors.module.scss";
 import { LandingPageInfo } from '../../constant';
+import { useNavigate } from 'react-router-dom';
 
 
 export interface HotelResponse{
@@ -14,7 +15,9 @@ export interface HotelResponse{
     ratings:number,
     type:string
 }
+
 function HotelCard(props:HotelResponse) {
+  const navigate=useNavigate()
   return (
     <Card>
         <Card.Header className='flex-row-center'>
@@ -26,7 +29,9 @@ function HotelCard(props:HotelResponse) {
             <Card.Text className='gilroy flex-row-center gap10 text-muted'><FontAwesomeIcon icon={faLocationDot} style={{color:colors.ES8}}></FontAwesomeIcon> {props.address}</Card.Text>
             <Card.Text className='gilroy flex-row-center gap10'><FontAwesomeIcon icon={faPhone} style={{color:colors.SS9}}></FontAwesomeIcon> {props.mobile}</Card.Text>
             <Ratings rating={props.ratings}/>
-            <Button className='gilroy flex-row-center padding20' style={{backgroundColor:colors.N3,border:'none'}} id='takedine'>{LandingPageInfo.VisitHotel}</Button>
+            <Button className='gilroy flex-row-center padding20' style={{backgroundColor:colors.N3,border:'none'}} id='takedine' onClick={()=>{
+              navigate(encodeURIComponent(`/${props.hotelname}`))
+            }}>{LandingPageInfo.VisitHotel}</Button>
 
         </Card.Body>
     </Card>

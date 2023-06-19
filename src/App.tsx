@@ -6,6 +6,7 @@ import SignupForm from './components/Registration'
 import {BrowserRouter,Route,Routes}from 'react-router-dom'
 import LoginForm from './components/Login'
 import LandingPage from './components/LandingPage'
+import CheckoutPage from './components/CheckoutPage'
 function App() {
 
   return (
@@ -13,7 +14,8 @@ function App() {
     <Routes>
       <Route path="/" element={<SignupForm />}></Route>
       <Route path="/login" element={<LoginForm />}></Route>
-      <Route path='/order' element={<LandingPage />}></Route>
+      <Route path='/hotels' element={<LandingPage />}></Route>
+      <Route path='hotels/:hotelname' element={<CheckoutPage />}></Route>
     </Routes>
   </BrowserRouter>
   )
