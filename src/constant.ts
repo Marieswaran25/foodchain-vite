@@ -53,4 +53,9 @@ enum LandingPageInfo{
 enum HotelCard{
   visitMyHote="Visit My Hotel"
 }
-export {FormCredentials,FormErrors,FormPlaceholders,UserDetails,LandingPageInfo,HotelCard}
+enum checkoutPage{
+  back="back",
+  orderYourFavouritefood="Order and Enjoy your "
+
+}
+export {FormCredentials,FormErrors,FormPlaceholders,UserDetails,LandingPageInfo,HotelCard,checkoutPage}
