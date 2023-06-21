@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export type Hotelcardprops = {
+    hotelname:string;
     name:string,
     costperItem:string,
     quantity:number,
@@ -27,6 +28,7 @@ function FoodCard(props: Hotelcardprops) {
             quantity: quantity,
             totalcost: Number(props.costperItem) * quantity,
             sold: props.sold,
+            hotelname:props.hotelname,
             addToCart:props.addToCart
           };
           props.addToCart(item)

@@ -312,3 +312,11 @@ background-color: #00315e;
 .padding15{
   padding: 15px;
 }
+.cartsection{
+  height: auto;
+  padding: 20px;
+}
+.deletecartitem:hover{
+color:red;
+cursor: pointer;
+}

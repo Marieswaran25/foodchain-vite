@@ -6,8 +6,10 @@ import User from "../user";
 import { UserDetails } from "../../constant";
 import React from "react";
 import colors from '../../assets/theme/colors.module.scss'
+import { useNavigate } from "react-router-dom";
 
 function Navheader() {
+  const navigate=useNavigate()
   const [opencard, showopencard] = React.useState(false as boolean);
   const props = {
     openuserInfo: (): JSX.Element => {
@@ -44,7 +46,7 @@ function Navheader() {
                 className="justify-content-end cart text-danger"
               ></FontAwesomeIcon>
             </h2>
-            <h2 className="text-center">
+            <h2 className="text-center" onClick={()=>navigate('/cart')}>
               <FontAwesomeIcon
                 icon={faCartShopping}
                 className="justify-content-end cart"

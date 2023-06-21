@@ -10,10 +10,11 @@ import colors from "../../assets/theme/colors.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-interface fooditem {
+export interface fooditem {
   name: string;
   costperItem: string;
   sold: boolean;
+  hotelname:string
 }
 
 interface foodResponse {
@@ -27,7 +28,6 @@ interface foodResponse {
 }
 
 function CheckoutPage() {
-  const [cartItems, setCartItems] = React.useState<Hotelcardprops[]>([]);
   const [Timemode, setTimemode] = React.useState("");
   const gettime = new Date().getHours();
   React.useEffect(() => {
@@ -41,14 +41,22 @@ function CheckoutPage() {
   }, [gettime]);
 
   const addToCart = (item: Hotelcardprops) => {
-    if (
-      cartItems.map((val: Hotelcardprops, index: number) => {
-        if (val.name === item.name) {
-          cartItems.splice(index, 1);
-        }
-      })
-    )
-      setCartItems((prevCartItems) => [...prevCartItems, item]);
+    const storedCartItems = localStorage.getItem("cartItems");
+    let cartItems:Hotelcardprops[]= [];
+    if (storedCartItems) {
+      cartItems=JSON.parse(storedCartItems);
+    }
+    const existingItem = cartItems.find((cartItems:fooditem)=>{
+      if(cartItems.hotelname===item.hotelname){ return cartItems.name===item.name?true:false}});
+
+    if (existingItem) {
+      existingItem.quantity = item.quantity;
+      existingItem.totalcost = item.totalcost;
+    } else {
+      cartItems.push(item);
+    }
+    
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
 
   const { hotelname } = useParams();
@@ -65,9 +73,6 @@ function CheckoutPage() {
   }, [hotelname]);
 
   const foodEntries = foods.food ? Object.entries(foods.food) : [];
-  React.useEffect(() => {
-    localStorage.setItem("cartitems", JSON.stringify(cartItems));
-  }, [cartItems]);
 
   return (
     <Container>
@@ -81,37 +86,37 @@ function CheckoutPage() {
         >
           <FontAwesomeIcon icon={faArrowLeft} /> {checkoutPage.back}
         </h3>
-        <h1 className="gilroy mt-5">{hotelname?.split("/")}</h1>
+<h1 className="gilroy mt-5">{hotelname?.split("/")}</h1>
 
-        <div className="flex-row-center" id="Food-content">
-          <h1
-            className="gilroy"
-            id="content-tittle"
-            style={{ color: colors.SS2 }}
-          >
-            {checkoutPage.orderYourFavouritefood} {Timemode}
-          </h1>
+<div className="flex-row-center" id="Food-content">
+  <h1
+    className="gilroy"
+    id="content-tittle"
+    style={{ color: colors.SS2 }}
+  >
+    {checkoutPage.orderYourFavouritefood} {Timemode}
+  </h1>
+</div>
+<div className="row">
+  {foodEntries
+    .filter(([key]) => key === Timemode)
+    .map(([key, value]) =>
+      value.map((item) => (
+        <div className="col-md-4 col-12 mt-3" key={item.name + key}>
+          <FoodCard
+            name={item.name}
+            costperItem={item.costperItem}
+            quantity={0}
+            totalcost={0}
+            sold={!item.sold}
+            addToCart={addToCart}
+            hotelname={foods.hotelname}
+          />
         </div>
-        <h1>{}</h1>
-        <div className="row">
-          {foodEntries
-            .filter(([key]) => key === Timemode)
-            .map(([key, value]) =>
-              value.map((item) => (
-                <div className="col-md-4 col-12" key={item.name + key}>
-                  <FoodCard
-                    name={item.name}
-                    costperItem={item.costperItem}
-                    quantity={0}
-                    totalcost={0}
-                    sold={!item.sold}
-                    addToCart={addToCart}
-                  />
-                </div>
-              ))
-            )}
-        </div>
-      </div>
+      ))
+    )}
+</div>
+</div>
     </Container>
   );
 }
