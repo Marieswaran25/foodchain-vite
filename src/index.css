@@ -1,255 +1,250 @@
 @font-face {
-  font-family: 'Gilroy';
-  font-weight: 600;
-  src: url('assets/fonts/Gilroy-Bold.woff2');
+    font-family: 'Gilroy';
+    font-weight: 600;
+    src: url('assets/fonts/Gilroy-Bold.woff2');
 }
 @font-face {
     font-family: 'GilroyReg';
     font-weight: 800;
     src: url('assets/fonts/Gilroy-Regular.woff2');
 }
-.commonlabel{
-  font-family: 'Lexend Peta', sans-serif;
-  font-size: small;
-  position: absolute;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  background-color: white;
-  margin-left: 5px;
+.commonlabel {
+    font-family: 'Lexend Peta', sans-serif;
+    font-size: small;
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    background-color: white;
+    margin-left: 5px;
 }
-.form-control{
-  font-family: 'Lexend Peta', sans-serif;
-  font-size: small;
+.form-control {
+    font-family: 'Lexend Peta', sans-serif;
+    font-size: small;
 }
 .form-control:focus {
-  border-color: black;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+    border-color: black;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
-.commonlabel::first-letter{
-  color: #d81d19;
+.commonlabel::first-letter {
+    color: #d81d19;
 }
-.flex-column{
-  display: flex;
-}
-
-.flex-row-center{
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: row;
-}
-.flex-row-space{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-.flex-column-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
- }
- .flex-column-space{
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-direction: column;
- }
- .flex-column-end{
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  flex-direction: column;
- }
-.form-control{
-  height: 70px;
-  padding: 20px;
-  margin-top: 10px;
-}
-.border{
-  border: 1px solid black;
-}
-.gap20{
-  gap: 20px;
-}
-.registration-btn{
-  border-radius: 100px;
-  border: none;
-  height: 70px;
-  width: 100%;
-  font-family: 'Lexend Peta', sans-serif;
-  background-color:#4fbce5;
-  font-size:14px;
-  color: white;
-}
-.registration-btn:hover{
-  background-color: #0172c2;
-}
-.padding20{
-  padding: 20px;
-}
-.padding10{
-  padding: 10px;
-}
-.full{
-  height: 100vh;
-}
-.flex-row-space{
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-}
-a{
-  color:#4fbce5;
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 300;
-  font-size: smaller;
- cursor: pointer;
- text-decoration: none;
+.flex-column {
+    display: flex;
 }
 
-h1{
-font-family: 'Gilroy', sans-serif;
-font-weight: 500;
-font-size: 2.5rem;
-line-height: 48px;
--webkit-font-smoothing: antialiased;
-color: black;
+.flex-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
-#forgotemail{
-  font-family: 'Gilroy', sans-serif;
-font-weight: 500;
+.flex-row-space {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
-#verificationemail{
-  font-family: 'Gilroy', sans-serif;
-font-weight: 200;
-font-size: 15px;
-line-height: 48px;
--webkit-font-smoothing: antialiased;
-color: #1a8310;
+.flex-column-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-#otpclock{
-  font-family: 'Gilroy', sans-serif;
-font-weight: 200;
-font-size: 15px;
-line-height: 45px;
--webkit-font-smoothing: antialiased;
+.flex-column-space {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.submit{
-  border-radius: 100px;
-  border: none;
-  height: 53px;
-  width: 40%;
-  font-family: 'Gilroy', sans-serif;
-  background-color:#4fbce5;
-  font-size:14px;
-  color: black;
+.flex-column-end {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
 }
-#resetEmail{
-  font-family: 'Gilroy', sans-serif;
-  font-size: small;
-  width: 100%;
-  height: 70%;
+.form-control {
+    height: 70px;
+    padding: 20px;
+    margin-top: 10px;
 }
-#resetEmail:focus{
-  border-color: azure;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+.border {
+    border: 1px solid black;
 }
-.closemark{
-  position: absolute;
-  margin-left: 80%;
-  top:0;
-  margin-top: 12px;
+.gap20 {
+    gap: 20px;
 }
-.verify{
-  border-radius: 100px;
-  border: none;
-  height: 50px;
-  width: 40%;
-  font-family: 'Gilroy', sans-serif;
-  background-color:#d1b4f0;
-  font-size:14px;
-  color: black;
+.registration-btn {
+    border-radius: 100px;
+    border: none;
+    height: 70px;
+    width: 100%;
+    font-family: 'Lexend Peta', sans-serif;
+    background-color: #4fbce5;
+    font-size: 14px;
+    color: white;
 }
-.verify:hover{
-  background-color: #481083;
-  color: white;
+.registration-btn:hover {
+    background-color: #0172c2;
 }
-#otp{
-  font-family: 'Gilroy', sans-serif;
-  font-size: small;
-  width: 100%;
-  height: 70%;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
+.padding20 {
+    padding: 20px;
 }
-#resendcode{
-  color:#4fbce5;
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 300;
-  font-size: smaller;
- cursor: pointer;
- text-decoration:underline;
+.padding10 {
+    padding: 10px;
 }
-.full-width{
-  width: 100%;
+.full {
+    height: 100vh;
 }
-/* #newpassword,#retypenewpassword{
-  height: 20%;
-} */
-small{
-  font-family: 'Gilroy', sans-serif;
-  font-weight: 300;
+.flex-row-space {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
-a:hover{
-  color: #0172c2;
-
-}
-.card{
-  border: none;
-}
-.logo{
-  width:50px;
-  height: 50px;
-  border-radius: 50%;
-  border:1px solid #ffcfcd;
-  font-family: 'Gilroy', sans-serif;
-  font-size: larger;
-
-}
-.cart{
-  width:20px;
-  height: 20px;
-}
-.gap10{
-  gap:10px
-}
-.flex-row-space2{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
+a {
+    color: #4fbce5;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 300;
+    font-size: smaller;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.cart:hover{
-  color: #00315e;
+h1 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 48px;
+    -webkit-font-smoothing: antialiased;
+    color: black;
 }
-p{
-  font-family: 'Gilroy', sans-serif;
+#forgotemail {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+}
+#verificationemail {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 48px;
+    -webkit-font-smoothing: antialiased;
+    color: #1a8310;
+}
+#otpclock {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 45px;
+    -webkit-font-smoothing: antialiased;
+}
+.submit {
+    border-radius: 100px;
+    border: none;
+    height: 53px;
+    width: 40%;
+    font-family: 'Gilroy', sans-serif;
+    background-color: #4fbce5;
+    font-size: 14px;
+    color: black;
+}
+#resetEmail {
+    font-family: 'Gilroy', sans-serif;
+    font-size: small;
+    width: 100%;
+    height: 70%;
+}
+#resetEmail:focus {
+    border-color: azure;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.closemark {
+    position: absolute;
+    margin-left: 80%;
+    top: 0;
+    margin-top: 12px;
+}
+.verify {
+    border-radius: 100px;
+    border: none;
+    height: 50px;
+    width: 40%;
+    font-family: 'Gilroy', sans-serif;
+    background-color: #d1b4f0;
+    font-size: 14px;
+    color: black;
+}
+.verify:hover {
+    background-color: #481083;
+    color: white;
+}
+#otp {
+    font-family: 'Gilroy', sans-serif;
+    font-size: small;
+    width: 100%;
+    height: 70%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+#resendcode {
+    color: #4fbce5;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 300;
+    font-size: smaller;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.full-width {
+    width: 100%;
+}
+small {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 300;
+}
+a:hover {
+    color: #0172c2;
+}
+.card {
+    border: none;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffcfcd;
+    font-family: 'Gilroy', sans-serif;
+    font-size: larger;
+}
+.cart {
+    width: 25px;
+    height: 25px;
+}
+.gap10 {
+    gap: 10px;
+}
+.flex-row-space2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
+.cart:hover {
+    color: #e79f10;
+    cursor: pointer;
 }
-.border-bottom{
-  border-bottom: 1px solid black;
+p {
+    font-family: 'Gilroy', sans-serif;
 }
-.charcard>p:hover{
-  background-color: #76838f;
+.border-bottom {
+    border-bottom: 1px solid black;
 }
-.charcard{
+.charcard > p:hover {
+    background-color: #76838f;
+}
+.charcard {
     height: 100%;
     width: 98%;
     margin: 0 auto; /* So as to center the box */
@@ -257,66 +252,65 @@ p{
     transition-duration: 2s;
 }
 
-#main-content{
-  margin-top: 12%;
+#main-content {
+    margin-top: 12%;
 }
-#Food-content{
-  margin-top: 3%;
+#Food-content {
+    margin-top: 3%;
 }
-.gilroy{
-  font-family: 'Gilroy', sans-serif;
+.gilroy {
+    font-family: 'Gilroy', sans-serif;
 }
-#content-tittle{
-  font-size: 100px;
-  line-height: 100px;
+#content-tittle {
+    font-size: 100px;
+    line-height: 100px;
 }
 @media only screen and (max-width: 768px) {
-  #content-tittle{
-    font-size: 70px;
-    line-height: 90px;
-  }
+    #content-tittle {
+        font-size: 70px;
+        line-height: 90px;
+    }
 }
-.hotelimg{
-  height:70px;
-  width:70px;
+.hotelimg {
+    height: 70px;
+    width: 70px;
 }
-.gap3{
-  gap:3px
+.gap3 {
+    gap: 3px;
 }
-.gap30{
-  gap:30px
+.gap30 {
+    gap: 30px;
 }
-#Vegeterian{
-  border:2px solid #5ab94b;
-  padding: 2px;
+#Vegeterian {
+    border: 2px solid #5ab94b;
+    padding: 2px;
 }
-#Non-Vegeterian{
-  border:2px solid #d81d19;
-  padding: 2px;
-
+#Non-Vegeterian {
+    border: 2px solid #d81d19;
+    padding: 2px;
 }
-#takedine:hover{
-background-color: #00315e;
+#takedine:hover {
+    background-color: #00315e;
 }
-.card-overlay{
-  background: rgba(0, 0, 0, 0.85);
- height: 400px;
- border-radius: 50px;
+.card-overlay {
+    background: rgba(0, 0, 0, 0.85);
+    height: 400px;
+    border-radius: 50px;
 }
-.bg-img{
-  background: url('./assets/images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size:cover ;
-  border-radius: 50px;
+.bg-img {
+    background: url('./assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
 }
-.padding15{
-  padding: 15px;
+.padding15 {
+    padding: 15px;
 }
-.cartsection{
-  height: auto;
-  padding: 20px;
+.cartsection {
+    height: auto;
+    padding: 20px;
 }
-.deletecartitem:hover{
-color:red;
-cursor: pointer;
+.deletecartitem:hover {
+    color: red;
+    cursor: pointer;
 }

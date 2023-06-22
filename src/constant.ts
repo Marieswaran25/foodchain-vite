@@ -55,7 +55,13 @@ enum HotelCard{
 }
 enum checkoutPage{
   back="back",
-  orderYourFavouritefood="Order and Enjoy your "
+  orderYourFavouritefood="Order and Enjoy your ",
+  addtocart="Add to Cart",
+  cartsuccess="Added to Cart !",
+  proceedtoPayent="Checkout to cart"
 
 }
-export {FormCredentials,FormErrors,FormPlaceholders,UserDetails,LandingPageInfo,HotelCard,checkoutPage}
+enum cart{
+  emptycart="Your cart is Empty"
+}
+export {FormCredentials,FormErrors,FormPlaceholders,UserDetails,LandingPageInfo,HotelCard,checkoutPage,cart}
