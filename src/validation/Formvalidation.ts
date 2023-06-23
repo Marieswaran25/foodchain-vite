@@ -51,5 +51,10 @@ ConfirmPassword: Yup.string()
 .required("*Password is required")
 .oneOf([Yup.ref('Password')], '*Passwords doesnt match')
 })
+export const addressSchema=Yup.object().shape({
+  Address:Yup.string()
+  .required("*Password is required")
+
+})
 
     

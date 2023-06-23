@@ -24,17 +24,18 @@ function CartElement(props: cartprops) {
         if (storedCartItems) {
             cartItems = JSON.parse(storedCartItems);
         }
-        const existitems = cartItems.find((cartitems: fooditem) => {
-            return cartitems.name === props.name ? true : false;
+        const existitems = cartItems.find((cartitems: fooditem,index:number) => {
+            return cartitems.name === props.name ? cartItems.splice(index,index) : false;
         });
 
         if (existitems) {
-            (existitems.quantity = quantity), (existitems.totalcost = quantity * Number(props.costperItem));
+            existitems.quantity = quantity, existitems.totalcost = quantity * Number(props.costperItem);
+
         }
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }
     return (
-        <Card style={{border: '1px solid #d9d9d9'}} className='mt-5'>
+        <Card style={{border: '1px solid #d9d9d9',borderRadius:'10px'}} className='mt-5'>
             <div className='cartsection flex-row-space'>
                 <div className='flex-row-space' style={{width: '60%'}}>
                     <Card.Img src={images} style={{height: '100px', width: '100px'}} className='img-fluid' />

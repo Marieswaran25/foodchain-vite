@@ -45,6 +45,12 @@
     justify-content: space-evenly;
     flex-direction: row;
 }
+.flex-row-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
 .flex-column-center {
     display: flex;
     align-items: center;
