@@ -13,6 +13,7 @@ import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import Spinner from '../Spinner';
 
 export interface fooditem {
+    quantity: number;
     name: string;
     costperItem: string;
     sold: boolean;
