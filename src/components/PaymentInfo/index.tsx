@@ -16,7 +16,7 @@ function PaymentInfo(props:paymentprops) {
       
   return (
       <Card className="flex-column gap20">
-            <Card.Text >{Paymentinfo.totalsummay}</Card.Text>
+            <Card.Text style={{marginLeft:'10%'}}>{Paymentinfo.totalsummay}</Card.Text>
            <div className="flex-column-center gap10">
            <Card.Text >{`${Paymentinfo.totalcost}:${props.totalcost}`}</Card.Text>
             <Card.Text >{`${Paymentinfo.totalitems}: ${props.totalitems}`}</Card.Text>
