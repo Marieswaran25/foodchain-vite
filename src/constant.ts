@@ -66,11 +66,18 @@ enum Address {
     enteryouraddress = "Enter your address"
 }
 enum Paymentinfo{
-  totalsummay="Total Summary",
+  totalsummay="Total Summary :",
   totalitems="Total items",
   totalcost="Total Cost",
   Paymentmethods="Payment Methods"
 
+}
+enum orderconfirmation{
+    confirmed="Your Order is Confirmed !",
+    orderno="Your order number is :",
+    thanks="Thanks for Your Order,",
+    visitAgain='Visit Again !',
+    email="Your Order Confirmation details have been sent to your Email!"
 }
 export { 
    FormCredentials, 
@@ -82,5 +89,6 @@ export {
    checkoutPage, 
    cart,
    Address,
-   Paymentinfo 
+   Paymentinfo ,
+   orderconfirmation
 };

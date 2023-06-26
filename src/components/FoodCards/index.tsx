@@ -1,9 +1,9 @@
-import {Button, Card} from 'react-bootstrap';
-import React from 'react';
-import img from '../../assets/images/2.png';
-import {faCircle, faMinus, faPlus} from '@fortawesome/free-solid-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {checkoutPage} from '../../constant';
+import { Button, Card } from "react-bootstrap";
+import React from "react";
+import img from "../../assets/images/2.png";
+import { faCircle, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { checkoutPage } from "../../constant";
 
 export type Hotelcardprops = {
     hotelname: string;
@@ -20,7 +20,7 @@ export type addtoCart = {
 
 function FoodCard(props: Hotelcardprops) {
     const [quantity, setquantity] = React.useState(1);
-    const [cartbtn, setCartbtn] = React.useState('warning');
+    const [cartbtn, setCartbtn] = React.useState("warning");
     function hadleaddtocart() {
         const item = {
             name: props.name,
@@ -29,53 +29,54 @@ function FoodCard(props: Hotelcardprops) {
             totalcost: Number(props.costperItem) * quantity,
             sold: props.sold,
             hotelname: props.hotelname,
-            addToCart: props.addToCart,
+            addToCart: props.addToCart
         };
         props.addToCart(item);
-        setCartbtn('success');
+        setCartbtn("success");
         setTimeout(() => {
-            setCartbtn('warning');
+            setCartbtn("warning");
         }, 1000);
     }
 
     return (
-        <div className='bg-img'>
-            <Card style={{border: '1px solid gray'}} className='card-overlay'>
-                <Card.Text className={`gilroy ${props.sold ? 'text-success' : 'text-danger'} mt-4`} style={{position: 'absolute', marginLeft: '70%'}}>
-                    <FontAwesomeIcon icon={faCircle} style={{fontSize: 'x-small'}} /> {props.sold ? 'Available' : 'Sold'}
+        <div className="bg-img">
+            <Card style={{ border: "1px solid gray" }} className="card-overlay">
+                <Card.Text className={`gilroy ${props.sold ? "text-success" : "text-danger"} mt-4`} style={{ position: "absolute", marginLeft: "70%" }}>
+                    <FontAwesomeIcon icon={faCircle} style={{ fontSize: "x-small" }} /> {props.sold ? "Available" : "Sold"}
                 </Card.Text>
 
-                <Card.Body className='flex-column-center gap3'>
-                    <Card.Img src={img} className='hotelimg'></Card.Img>
-                    <Card.Text className='gilroy text-light' style={{fontSize: 'x-large'}}>
+                <Card.Body className="flex-column-center gap3">
+                    <Card.Img src={img} className="hotelimg"></Card.Img>
+                    <Card.Text className="gilroy text-light" style={{ fontSize: "x-large" }}>
                         {props.name.replace(props.name.charAt(0), props.name.charAt(0).toUpperCase())}
                     </Card.Text>
-                    <Card.Text className='gilroy text-warning' style={{fontSize: 'x-large'}}>
-                        {' '}
+                    <Card.Text className="gilroy text-warning" style={{ fontSize: "x-large" }}>
                         &#8377; {`${props.costperItem}`}
                     </Card.Text>
-                    <div className='flex-row-center gap20'>
+                    <div className="flex-row-center gap20">
                         <Button
-                            variant='secondary'
+                            variant="secondary"
                             onClick={() => {
                                 setquantity((count) => (count = count + 1));
                             }}
-                            disabled={!props.sold}>
+                            disabled={!props.sold}
+                        >
                             <FontAwesomeIcon icon={faPlus} />
                         </Button>
-                        <h3 className='gilroy text-light'>{quantity}</h3>
+                        <h3 className="gilroy text-light">{quantity}</h3>
                         <Button
-                            variant='secondary'
+                            variant="secondary"
                             onClick={() => {
                                 setquantity((count) => (count > 1 ? (count = count - 1) : (count = 1)));
                             }}
-                            disabled={!props.sold}>
+                            disabled={!props.sold}
+                        >
                             <FontAwesomeIcon icon={faMinus} />
                         </Button>
                     </div>
                     {/* <Card.Text className='gilroy text-warning mt-4 border padding10' style={{fontSize:'x-large'}}> &#8377; {Number(props.costperItem)*quantity}</Card.Text> */}
-                    <Button variant={cartbtn} className='padding10 gilroy mt-5' style={{width: '60%'}} disabled={!props.sold} id={props.name} onClick={hadleaddtocart}>
-                        {cartbtn === 'warning' ? checkoutPage.addtocart : checkoutPage.cartsuccess}
+                    <Button variant={cartbtn} className="padding10 gilroy mt-5" style={{ width: "60%" }} disabled={!props.sold} id={props.name} onClick={hadleaddtocart}>
+                        {cartbtn === "warning" ? checkoutPage.addtocart : checkoutPage.cartsuccess}
                     </Button>
                 </Card.Body>
             </Card>

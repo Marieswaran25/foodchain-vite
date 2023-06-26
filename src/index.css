@@ -320,3 +320,11 @@ p {
     color: red;
     cursor: pointer;
 }
+.paymentmode{
+    width: 70px;
+    height: 30px;
+    border: 1px solid gray;
+    padding: 6px;
+    border-radius: 100px;
+    cursor: pointer;
+}

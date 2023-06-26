@@ -8,6 +8,7 @@ import LoginForm from './components/Login'
 import LandingPage from './components/LandingPage'
 import CheckoutPage from './components/CheckoutPage'
 import Cart from './components/Cart'
+import OrderConfirmation from './components/OrderConfirmation'
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/hotels' element={<LandingPage />}></Route>
       <Route path='hotels/:hotelname' element={<CheckoutPage />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
+      <Route path='/order-success' element={<OrderConfirmation />}></Route>
     </Routes>
   </BrowserRouter>
   )
